@@ -3,10 +3,10 @@ import './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from "react-router-dom";
-import Resume from '../images/Home/nav/resume.png'
-import CV from '../images/Home/nav/cv.png'
-import About from '../images/Home/nav/about.png'
-import Logo from '../images/Home/nav/zety.png'
+import Resume from '../images/nav/resume.png'
+import CV from '../images/nav/cv.png'
+import About from '../images/nav/about.png'
+import Logo from '../images/nav/zety.png'
 function Navbar(){
     return<>
         <div className="nav-main">
@@ -35,19 +35,19 @@ function Navbar(){
                                     <div className="nav-mid-link-name">Resume Templates</div>
                                     <div className="nav-mid-link-text">Find the perfect template for you.</div>
                                 </NavLink>
-                                <NavLink className="nav-mid-links">
+                                <NavLink to="/resume-example" className="nav-mid-links">
                                     <div className="nav-mid-link-name">Resume Example</div>
                                     <div className="nav-mid-link-text">See perfect resume examples that get you jobs.</div>
                                 </NavLink>
-                                <NavLink className="nav-mid-links">
+                                <NavLink to="/resume-format" className="nav-mid-links">
                                     <div className="nav-mid-link-name">Resume Format</div>
                                     <div className="nav-mid-link-text">Pick the right resume format for your situation.</div>
                                 </NavLink>
-                                <NavLink className="nav-mid-links">
+                                <NavLink to="/how-to-write-a-resume" className="nav-mid-links">
                                     <div className="nav-mid-link-name">How to Write a Resume</div>
                                     <div className="nav-mid-link-text">Learn how to make resume that gets interviews.</div>
                                 </NavLink>
-                                <NavLink className="nav-mid-links">
+                                <NavLink to="/resume-checker" className="nav-mid-links">
                                     <div className="nav-mid-link-name">Resume Checker</div>
                                     <div className="nav-mid-link-text">Get your resume checked and scored with one click.</div>
                                 </NavLink>
@@ -57,7 +57,10 @@ function Navbar(){
                                 </NavLink>
                             </div>
                             <div className='nav-bottom'>
-                                <button>Create Your Resume Now</button>
+                                <NavLink to="/login">
+                                    <button>Create Your Resume Now</button>
+                                </NavLink>
+                                
                             </div>
                         </div>
                     </div>
@@ -69,7 +72,7 @@ function Navbar(){
                         <div className="hover-content">
                             <div className='nav-top'>
                             <div className="nav-top-img">
-                                    {/* <img src={CV} alt="" /> */}
+                                    <img src={CV} alt="" />
                                 </div>
                                 <NavLink to={"/cv-builder"} className="nav-top-text">
                                     <p className='nav-top-head'>CV Builder</p>
@@ -109,7 +112,7 @@ function Navbar(){
                         <div className="hover-content">
                             <div className='nav-top'>
                             <div className="nav-top-img">
-                                    {/* <img src={About} alt="" /> */}
+                                    <img src={About} alt="" />
                                 </div>
                                 <NavLink to={"/about"} className="nav-top-text">
                                     <p className='nav-top-head'>About</p>
